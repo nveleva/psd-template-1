@@ -1,0 +1,399 @@
+/* RESETS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END OF RESETS */
+/* FONTS */
+@font-face {
+  font-family: 'HelveticaInseratLT-Roman';
+  src: url('fonts/HelveticaInseratLT-Roman.eot?#iefix') format('embedded-opentype'),  
+  		url('fonts/HelveticaInseratLT-Roman.woff') format('woff'), 
+  		url('fonts/HelveticaInseratLT-Roman.ttf')  format('truetype'), 
+  		url('fonts/HelveticaInseratLT-Roman.svg#HelveticaInseratLT-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* END OF FONTS */
+
+body{
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+h1{
+	font-size: 48px;
+	line-height: 48px;
+	font-family: "HelveticaInseratLT-Roman", Arial, sans-serif;
+	padding: 15px 17px 15px;
+}
+
+hr{
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #7a7a7a;
+	margin: 0 10px 15px 10px;
+}
+
+#wrapper{
+	width: 1152px;
+	margin: 10px auto;
+}
+
+#logo{
+	width: 31px;
+	height: 109px;
+	position: fixed;
+	top: 57px;
+	left: 0;
+	background: url("img/logo.png");
+	background-repeat: no-repeat; 
+	z-index: 2;
+}
+
+.table{
+	display: table;
+	table-layout: fixed;
+}
+
+.table-row{
+	display: table-row;
+}
+
+.table-cell{
+	display: table-cell;
+	height: 100%;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.big{
+	width: 70%;
+	border: 10px solid #ccc;
+	background-color: #515151;
+}
+
+.small{
+	width: 30%;
+	border: 10px solid #a3a3a3;
+	background-color: #515151;
+}
+
+header{
+	background-color: #ccc;
+	margin-bottom: 10px;
+}
+
+#en, #fr, #de{
+	display: inline-block;
+}
+
+.language a:hover{
+	opacity: 0.1;
+}
+
+.language a:active{
+	opacity: 0.1;
+}
+
+.language{
+	float: right;
+	padding-top: 77px;
+	margin-right: 10px;
+}
+
+.language a{
+	border-radius: 3px;
+}
+
+#en{
+	width: 28px;
+    height: 20px;
+    background: url("img/spritesheet.png") -5px -5px;
+}
+
+#fr{
+	width: 28px;
+	height: 20px;
+	background: url("img/spritesheet.png") -5px -35px;
+}
+
+#de{
+	width: 27px;
+	height: 20px;
+	background: url("img/spritesheet.png") -43px -5px;
+}
+
+nav{
+	padding-top: 75px;
+	padding-left: 5px;
+	float:left;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav ul li a{
+	display: inline-block;
+	width: 102px;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 0;
+	text-decoration: none;
+	background-color: #666;
+	position: relative;
+	/* z-index: 1 */
+}
+
+#drop-down-menu::after{
+	content: "";
+	display: block;
+	position: absolute;
+/* 	z-index: 2; */
+	background: url("img/spritesheet.png") -80px -5px;
+	width: 3px;
+	height: 5px;
+	right: 13px;
+	top: 13px;
+}
+
+#drop-down-menu.open::after{
+	content: "";
+	display: block;
+	position: absolute;
+/* 	z-index: 2; */
+	background: url("img/spritesheet.png") -80px -20px;
+	width: 5px;
+	height: 3px;
+	right: 13px;
+	top: 13px;
+}
+
+.nested-nav{
+	display: none;
+	position: absolute;
+}
+
+nav li a.open + .nested-nav{
+	display: block;
+} 
+
+.nested-nav li,
+nav li a.open{
+	background-color: #000; 
+}
+
+.nested-nav li a{
+	width: 147px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 5px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #808080;
+	background-color: #000;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.nested-nav li{
+	display: block;
+}
+
+.nested-nav li:last-child a{
+	border: none;
+}
+
+#mainContent{
+	color:white;
+}
+
+section p{
+	margin: 0 25px 25px;
+	text-indent: 35px;
+
+}
+
+section p:last-child{
+	margin-bottom: 10px;
+}
+
+#tableContent{
+	background-color: #282828;
+	color: white;
+	margin: 0 25px 25px;
+	padding: 10px;
+}
+
+table{
+	width: 100%;
+}
+
+th, td{
+	border: 2px solid #515151;
+	
+}
+
+table th{
+	font-weight: bold;
+}
+
+table th, td{
+	padding: 5px 10px;
+}
+
+tbody tr:nth-child(odd){
+	background-color: #a3a3a3;
+}
+
+aside div{
+	background-color: #000;
+}
+
+aside div ul li{
+	border-bottom: 1px solid #515151;
+	padding: 10px;
+}
+
+aside div ul li:last-child{
+	border: none;
+}
+aside div ul li a{
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+aside div ul li a::after{
+	content: "";
+	display: block;
+	width: 3px;
+	height: 5px;
+	background: url("img/spritesheet.png") -80px -5px;
+	z-index: 2;
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
+
+a.open-info::after{
+	content: "";
+	display: block;
+	width: 5px;
+	height: 3px;
+	background: url("img/spritesheet.png") -80px -20px;
+	z-index: 2;
+	position: absolute;
+	right: 10px;
+	top: 8px;
+}
+
+.aside-list li p{
+	display: none;
+	padding: 10px;
+	color: #fff;
+}
+
+.aside-list li a.open-info + p{
+	display: block;
+}
+
+footer{
+	background-color: #ccc;
+	margin-top: 10px;
+}
+
+footer ul{
+	float: right;
+}
+
+footer ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+footer ul li a, footer p{
+	color: #777;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+footer ul, footer p{
+	margin: 15px 20px 13px 85px;
+}
+
+footer p{
+	float:left;
+}
+.clear{
+	clear:both;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1180px){
+	#wrapper{
+		width: 960px;
+	}
+}
+@media screen and (max-width: 1080px){
+	#wrapper{
+		width: 880px;
+	}
+}
+@media screen and (max-width: 980px){
+	#wrapper{
+		width: 700px;
+	}
+}
+@media screen and (max-width: 800px){
+	#wrapper{
+		width: 600px;
+	}
+}
